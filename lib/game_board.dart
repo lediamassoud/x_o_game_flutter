@@ -15,14 +15,36 @@ class GameBoard extends StatelessWidget {
         children: [
           const Expanded(
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Text(
-                  "player1: 0",
-                  style: TextStyle(fontSize: 30),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      "player1",
+                      style: TextStyle(fontSize: 30),
+                    ),
+                    Text(
+                      "0",
+                      style: TextStyle(fontSize: 30),
+                    ),
+                  ],
                 ),
-                Text(
-                  "player2: 0",
-                  style: TextStyle(fontSize: 30),
+                SizedBox(
+                  width: 5,
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      "player2",
+                      style: TextStyle(fontSize: 30),
+                    ),
+                    Text(
+                      "0",
+                      style: TextStyle(fontSize: 30),
+                    ),
+                  ],
                 ),
               ],
             ),

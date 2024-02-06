@@ -8,7 +8,10 @@ void main() {
       appBar: AppBar(
         title: const Text("XO Game"),
       ),
-      body: GameBoard(),
+      body: Padding(
+        padding: const EdgeInsets.all(15.0),
+        child: GameBoard(),
+      ),
     ),
   ));
 }
