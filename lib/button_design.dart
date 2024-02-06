@@ -2,9 +2,14 @@ import 'package:flutter/material.dart';
 
 class ButtonDesign extends StatelessWidget {
   String value;
+  int index;
   Function onClick;
 
-  ButtonDesign({super.key, required this.value, required this.onClick});
+  ButtonDesign(
+      {super.key,
+      required this.value,
+      required this.index,
+      required this.onClick});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +18,7 @@ class ButtonDesign extends StatelessWidget {
       margin: const EdgeInsets.all(8),
       child: ElevatedButton(
           onPressed: () {
-            onClick();
+            onClick(index);
           },
           child: Text(
             value,
